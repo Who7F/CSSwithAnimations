@@ -1,0 +1,108 @@
+.cards
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	border-radius: 25px
+	background-color: white
+	height: fit-content
+	width: 90%
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
+	& > a > img
+		object-fit: cover
+		width: 100%
+		height: 200px
+		border-radius: 25px 25px 0px 0px
+	&__foot
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		&>div>i:hover
+			color: red
+
+.order__cards
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: space-between
+	flex-direction: row
+	border-radius: 25px
+	background-color: white
+	height: $ordercard
+	width: 95%
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
+	opacity: 0
+	animation: slideup2 3s 
+	animation-fill-mode: forwards	
+	@include tablet-only 	
+		width: 30%
+	&__text
+		width: 75%
+		
+		transition-timing-function: linear
+		transition: all $hovertime
+		&> h4
+			margin: 15px
+			margin-left: 20px
+			white-space: nowrap
+			overflow: hidden
+		&> p
+			margin-left: 20px
+			margin-bottom: 0px
+			white-space: nowrap
+			overflow: hidden
+			
+	&__cost
+		display: Flex
+		flex-wrap: wrap
+		align-items: flex-end
+		font-weight: 900
+	&__check
+		background-color: $tertiaryColor
+		width: 0px
+		height: $ordercard
+		white-space: nowrap
+		overflow: hidden
+		transition: all 1.5s cubic-bezier(0,0,1,1)
+		
+		overflow: clip
+		border-radius: 0px 25px 25px 0px
+		&> i
+			margin: 34px
+			background-color: $tertiaryColor
+			color: white
+			font-size: 36px
+			transition: all $hovertime
+	&:hover > .order__cards__check
+		width: $ordercard
+	&:hover > .order__cards__check	> i
+		transform: rotate(360deg)		
+	&:hover > .order__cards__text
+		width: calc(75% - $ordercard)
+	
+
+@keyframes slideup
+	from
+		opacity: 0
+		transform: translateY(10%)
+	
+	to  
+		opacity: 1 	
+		
+@keyframes slideup2
+	0%
+		opacity: 0
+		transform: translateY(10%)
+	70%
+		opacity: 1
+		transform: translateY(10%)
+	100%
+		opacity: 1
+		transform: translateY(0%)
+
+.order__cards:nth-child(2)
+	animation-delay: 1s	
+
+.order__cards:nth-child(3)
+	animation-delay: 2s	
+	

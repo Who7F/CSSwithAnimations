@@ -1,0 +1,371 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  background-color: white;
+  height: fit-content;
+  width: 90%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.cards > a > img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 25px 25px 0px 0px;
+}
+.cards__foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards__foot > div > i:hover {
+  color: red;
+}
+
+.order__cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 25px;
+  background-color: white;
+  height: 100px;
+  width: 95%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: slideup2 3s;
+  animation-fill-mode: forwards;
+}
+@media screen and (min-width: 600px) {
+  .order__cards {
+    width: 30%;
+  }
+}
+.order__cards__text {
+  width: 75%;
+  transition-timing-function: linear;
+  transition: all 1s;
+}
+.order__cards__text > h4 {
+  margin: 15px;
+  margin-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.order__cards__text > p {
+  margin-left: 20px;
+  margin-bottom: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.order__cards__cost {
+  display: Flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  font-weight: 900;
+}
+.order__cards__check {
+  background-color: #99E2D0;
+  width: 0px;
+  height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 1.5s cubic-bezier(0, 0, 1, 1);
+  overflow: clip;
+  border-radius: 0px 25px 25px 0px;
+}
+.order__cards__check > i {
+  margin: 34px;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 36px;
+  transition: all 1s;
+}
+.order__cards:hover > .order__cards__check {
+  width: 100px;
+}
+.order__cards:hover > .order__cards__check > i {
+  transform: rotate(360deg);
+}
+.order__cards:hover > .order__cards__text {
+  width: calc(75% - 100px);
+}
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideup2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.order__cards:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.order__cards:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.header__img {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.header__img > img {
+  align-self: center;
+  object-fit: cover;
+  width: 50%;
+}
+.header__back {
+  font-size: 70px;
+  position: absolute;
+  left: 30px;
+}
+.header__back > a {
+  color: black;
+}
+
+footer {
+  display: Flex;
+  flex-wrap: wrap;
+  background-color: #4A4A4A;
+  flex-direction: column;
+  color: white;
+}
+footer > div {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+footer > div > div > img {
+  fill: #fff;
+  color: #fff;
+}
+footer > div > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+footer > div > p > a {
+  color: white;
+  text-decoration: none;
+}
+
+.button {
+  border-radius: 15px 15px 15px 15px;
+  background: linear-gradient(10deg, #9356DC, #FF79DA);
+  color: white;
+}
+
+.explore {
+  border-radius: 30px 30px 30px 30px;
+  background: linear-gradient(10deg, #9356DC, #FF79DA);
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.works__button {
+  display: Flex;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 15px 15px 15px 15px;
+  background: #DCDCDC;
+  padding: 15px 32px;
+  width: 90%;
+  border: none;
+  font-size: 24px;
+  font-family: Raleway;
+}
+.works__button__number {
+  padding: 5px 12px;
+  border-radius: 30px;
+  background: #8A2BE2;
+  position: absolute;
+  left: -15px;
+  top: 10px;
+  color: #FFF;
+}
+.works__button__icon {
+  color: #8A2BE2;
+  padding-right: 20px;
+}
+.works__button:hover {
+  background: #2be2c7;
+}
+@media screen and (min-width: 600px) {
+  .works__button {
+    width: 30%;
+  }
+}
+
+.hart__button {
+  position: relative;
+}
+.hart__button > i {
+  position: absolute;
+  transition: 2s;
+}
+.hart__button > i:hover {
+  opacity: 1;
+}
+
+.transparent {
+  opacity: 0;
+  color: #9356DC;
+}
+
+.order__img {
+  margin-bottom: -30px;
+}
+.order__img > img {
+  object-fit: cover;
+  width: 100%;
+}
+.order__main {
+  background-color: #DCDCDC;
+  padding-bottom: 30px;
+  border-radius: 50px 50px 0px 0px;
+  width: 100%;
+}
+.order__restaurants {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order__restaurants > div > i {
+  font-size: 30px;
+}
+.order__menu {
+  width: 100%;
+}
+.order__menu > div > div > h3 {
+  padding-left: 30px;
+  position: relative;
+}
+.order__menu > div > div > h3:before {
+  position: absolute;
+  height: 5px;
+  width: 10%;
+  left: 30px;
+  bottom: -20px;
+  background: #99E2D0;
+  display: block;
+  content: "";
+}
+.order__menu__cardwrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .order__menu__cardwrap {
+    flex-direction: row;
+  }
+}
+.order__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+body {
+  font-family: "Roboto", sans serif;
+  box-sizing: border-box;
+  font-size: 20px;
+  margin: auto;
+}
+
+.location {
+  display: Flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 20px;
+  background-color: #A9A9A9;
+  box-shadow: inset 0px 5px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.blocktop {
+  display: Flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #DCDCDC;
+}
+.blocktop > div {
+  align-self: center;
+}
+
+.blockmid {
+  display: Flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+.blockmid > div {
+  display: Flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 600px) {
+  .blockmid > div {
+    flex-direction: row;
+  }
+}
+
+.restarant {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #DCDCDC;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+.restarant__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */

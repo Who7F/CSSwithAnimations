@@ -1,0 +1,59 @@
+@import 'abstracts/_varibles.sass'
+@import 'abstracts/_mixin.sass'
+@import 'base/_reset.sass'
+@import 'components/_cards.sass'
+@import 'layout/_header.sass'
+@import 'layout/_footer.sass'
+@import 'components/_buttons.sass'
+@import 'pages/_order.sass'
+@import 'base/_typography.sass'
+
+
+
+.location
+	display: Flex
+	flex-wrap: wrap
+	align-items: baseline
+	justify-content: center
+	gap: 20px
+	background-color: $darkgray
+	box-shadow: inset 0px 5px 0px 0px rgba(0,0,0,0.2)
+	
+		
+
+.blocktop
+	display: Flex
+	flex-wrap: wrap
+	flex-direction: column
+	background-color: $lightgray
+	&>div
+		align-self: center
+	
+
+.blockmid	
+	display: Flex
+	flex-wrap: wrap
+	flex-direction: column
+	gap: 20px
+	padding-bottom: 30px
+	&> div
+		display: Flex
+		flex-wrap: wrap
+		
+		justify-content: center
+		gap: 20px
+		@include tablet-only 
+			flex-direction: row
+		
+.restarant
+	display: flex
+	flex-wrap: wrap
+	background-color: $lightgray
+	gap: 30px
+	padding-bottom: 40px
+	&__cards
+		display: flex
+		flex-wrap: wrap
+		gap: 30px
+		justify-content: center
+	
