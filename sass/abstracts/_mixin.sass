@@ -1,4 +1,7 @@
 @mixin tablet-only 
-    @media screen and (min-width: map-get($breakpoints, tablet))
+    @media screen and (min-width: map-get($breakpoints, "tablet"))
         @content
     
+@mixin decktop-only 
+    @media screen and (min-width: map-get($breakpoints, "decktop"))
+        @content
