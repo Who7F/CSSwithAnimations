@@ -1,0 +1,39 @@
+@keyframes loader 
+	0% 
+		transform: rotate(0)
+	80%
+		opacity: .9
+	100%
+		transform: rotate(360deg)
+		opacity: 0
+
+@keyframes hide-loader 
+	0%
+		display: block
+	80%
+		opacity: 1
+	100% 
+		visibility: hidden
+		opacity: 0
+
+
+.home
+	&__loader
+		position: fixed
+		display: flex
+		justify-content: center
+		background-color: #fff
+		z-index: 10
+		align-items: center
+		width: 100%
+		height: 100%
+		animation: hide-loader 2s linear
+		animation-fill-mode: forwards
+		&>div
+			width: 100px
+			height: 100px
+			background-color: #fff
+			border: 20px solid $primaryColor
+			border-top: 10px solid $secondaryColor
+			border-radius: 50%
+			animation: loader 2s linear

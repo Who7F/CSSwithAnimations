@@ -1,4 +1,4 @@
-.cards
+.home__cards
 	display: flex
 	flex-direction: column
 	flex-wrap: wrap
@@ -6,79 +6,110 @@
 	background-color: white
 	height: fit-content
 	width: 90%
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
-	& > a > img
-		object-fit: cover
-		width: 100%
-		height: 200px
-		border-radius: 25px 25px 0px 0px
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2)
+	&> a
+		text-decoration: none
+		color: #000
+	&:hover 
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
+	&__img
+		position: relative
+		& > img
+			object-fit: cover
+			width: 100%
+			height: 200px
+			border-radius: 25px 25px 0px 0px
+		& > span
+			position: absolute
+			top: 2rem
+			right: 2rem
+			background-color: $tertiaryColor
+			color:#FFF
 	&__foot
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 		align-items: center
-		&>div>i:hover
-			color: red
+		position: relative
+		&__hart
+			position: absolute
+			right: 3rem
+			bottom: 3rem
+		&__text
+			&>  h3
+				font-size: 1.5rem
+				margin-left: 1rem
+			&>  p
+				margin-left: 1rem
+				font-size: 1.5rem
+				padding-bottom: 1rem
 
 .order__cards
 	display: flex
-	flex-direction: column
-	flex-wrap: wrap
-	justify-content: space-between
-	flex-direction: row
 	border-radius: 25px
 	background-color: white
 	height: $ordercard
 	width: 95%
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
 	opacity: 0
-	animation: slideup2 3s 
-	animation-fill-mode: forwards	
+	animation: slideup 3s 
+	animation-fill-mode: forwards
+	
+	&> div
+		padding: 1rem
+		display: flex
+		justify-content: space-between
+		width: 100%
+		align-items: flex-end
+		overflow: hidden
+		
 	@include tablet-only 	
 		width: 30%
 	&__text
 		width: 75%
 		
-		transition-timing-function: linear
-		transition: all $hovertime
 		&> h4
 			margin: 15px
 			margin-left: 20px
 			white-space: nowrap
 			overflow: hidden
+			font-size: 1.5rem
 		&> p
 			margin-left: 20px
 			margin-bottom: 0px
 			white-space: nowrap
 			overflow: hidden
+			font-size: 1.3rem
 			
 	&__cost
 		display: Flex
 		flex-wrap: wrap
 		align-items: flex-end
 		font-weight: 900
+		font-size: 1.3rem
+		padding-right: 1rem
+		
 	&__check
 		background-color: $tertiaryColor
 		width: 0px
 		height: $ordercard
 		white-space: nowrap
 		overflow: hidden
-		transition: all 1.5s cubic-bezier(0,0,1,1)
-		
-		overflow: clip
 		border-radius: 0px 25px 25px 0px
+		transition: all 1s ease
 		&> i
 			margin: 34px
 			background-color: $tertiaryColor
 			color: white
 			font-size: 36px
-			transition: all $hovertime
+			transition-delay: 1s
+			transition: transform 1s ease
 	&:hover > .order__cards__check
 		width: $ordercard
 	&:hover > .order__cards__check	> i
 		transform: rotate(360deg)		
-	&:hover > .order__cards__text
-		width: calc(75% - $ordercard)
+	
+		
 	
 
 @keyframes slideup

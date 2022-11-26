@@ -1,0 +1,84 @@
+body {
+  background: #272727;
+}
+
+.nav {
+  badding-right: 6rem;
+  flex: 2 1 auto;
+  taxt-align: right;
+}
+.nav nav__link {
+  display: inline;
+  font-size: 3rem;
+  padding-left: 1.5rem;
+}
+.nav nav__link nav__link--active {
+  color: #001534;
+}
+
+.btn {
+  background: #ff652f;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+}
+.btn:hover > .ball {
+  background-color: red;
+  width: 10rem;
+}
+
+.input {
+  background-color: #19647E;
+}
+.input:focus {
+  background-color: red;
+}
+
+@media screen and (max-width: 599px) {
+  .btn {
+    background: red;
+  }
+}
+.ball {
+  width: 5rem;
+  height: 5rem;
+  background-color: #ff652f;
+  margin-bottom: 1rem;
+  border-radius: 2.5rem;
+  transition: all 4s;
+}
+
+.nball {
+  opacity: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  background-color: #ff652f;
+  animation: slideup 6s;
+  animation-fill-mode: forwards;
+}
+
+.nball:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.nball:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.nball:nth-child(4) {
+  animation-delay: 3s;
+}
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

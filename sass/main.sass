@@ -1,14 +1,18 @@
 @import 'abstracts/_varibles.sass'
 @import 'abstracts/_mixin.sass'
 @import 'base/_reset.sass'
-@import 'components/_cards.sass'
+@import 'base/_typography.sass'
 @import 'layout/_header.sass'
 @import 'layout/_footer.sass'
 @import 'components/_buttons.sass'
+@import 'components/_cards.sass'
+@import 'pages/_home.sass'
 @import 'pages/_order.sass'
-@import 'base/_typography.sass'
 
 
+
+		
+	
 
 .location
 	display: Flex
@@ -17,18 +21,26 @@
 	justify-content: center
 	gap: 20px
 	background-color: $darkgray
+	padding: 2rem
 	box-shadow: inset 0px 5px 0px 0px rgba(0,0,0,0.2)
 	
 		
 
 .blocktop
+	padding-top: 2rem
+	padding-bottom: 3rem
 	display: Flex
 	flex-wrap: wrap
 	flex-direction: column
 	background-color: $lightgray
 	&>div
 		align-self: center
-	
+		&> h1
+			font-size: 2rem
+			margin-bottom: 2rem
+		&> p
+			font-size: 1.3rem
+			margin-bottom: 2rem
 
 .blockmid	
 	display: Flex
@@ -36,6 +48,12 @@
 	flex-direction: column
 	gap: 20px
 	padding-bottom: 30px
+	padding-top: 1rem
+	&> h2
+		margin-left: 30px
+		font-size: 1.3rem
+		
+		
 	&> div
 		display: Flex
 		flex-wrap: wrap
@@ -51,7 +69,11 @@
 	flex-direction: column 
 	background-color: $lightgray
 	gap: 30px
+	padding-top: 1.3rem
 	padding-bottom: 40px
+	& > div > h2
+		margin-left: 30px
+		font-size: 1.3rem
 	&__cards
 		display: flex
 		flex-wrap: wrap

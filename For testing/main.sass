@@ -1,0 +1,83 @@
+$primary-color: #272727
+$accent-color: #ff652f
+$test-color: #fff
+$ball-size: 5rem
+
+body
+	background: $primary-color
+
+.nav
+	badding-right: 6rem
+	flex: 2 1 auto
+	taxt-align: right
+	nav__link
+		display: inline
+		font-size: 3rem
+		padding-left: 1.5rem
+		nav__link--active
+			color: #001534
+			
+
+	
+
+
+	
+.btn 
+	background: #ff652f
+	font-size: 3rem
+	cursor: pointer
+	padding: 1.85rem 3rem
+	border-radius: 10rem
+	
+	&:hover > .ball
+		background-color: red
+		width: 10rem
+
+.input
+	background-color: #19647E
+	&:focus
+		background-color: red
+    
+@media screen and (max-width: 599px) 
+	.btn
+		background: red
+  
+
+
+.ball 
+	width: $ball-size
+	height: $ball-size
+	background-color: $accent-color
+	margin-bottom: 1rem
+	border-radius: $ball-size * 0.5
+	transition: all 4s
+
+.nball 
+	opacity: 0
+	width: $ball-size
+	height: $ball-size
+	border-radius: $ball-size * 0.5
+	background-color: $accent-color
+
+	animation: slideup 6s 
+	animation-fill-mode: forwards
+	
+
+.nball:nth-child(2)
+	animation-delay: 1s
+
+.nball:nth-child(3)
+	animation-delay: 2s
+
+.nball:nth-child(4)
+	animation-delay: 3s
+
+	
+@keyframes slideup
+	from
+		opacity: 0
+		transform: translateY(10%)
+	
+	to  
+		opacity: 1 
+
