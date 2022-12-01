@@ -8,23 +8,22 @@
 	background: linear-gradient(10deg, $primaryColor, $secondaryColor)
 	color: white
 	border: none
-	padding: 15px 32px
+	padding: 1.5rem 3rem
 	text-align: center
 	text-decoration: none
 	display: inline-block
-	font-size: 16px
+	font-size: 1.5rem
 	margin: 4px 2px
 
 .works__button
 	display: Flex
-	flex-wrap: wrap
 	position: relative
 	border-radius: 15px 15px 15px 15px
 	background: $lightgray
 	padding: 15px 32px
 	width: 90%
 	border: none
-	font-size: 24px
+	font-size: 1.5rem
 	font-family: Raleway
 	&__number
 		padding: 5px 12px
@@ -39,8 +38,10 @@
 		padding-right: 20px
 	&:hover
 		background: lighten($primaryColor, 30%)
-	@include tablet-only 	
+	@include desktop-only 	
 		width: 30%
+		font-size: 1.1rem
+		
 		
 .hart__button
 	position: relative

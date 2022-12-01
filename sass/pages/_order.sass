@@ -1,8 +1,6 @@
 .order
 	&__img
 		position: relative
-		@include decktop-only
-			height: 150px
 		&> img 
 			object-fit: cover
 			width: 100%
@@ -31,6 +29,7 @@
 		& > h1 
 			font-size: 2.5rem
 			padding-left: 30px
+			font-style: oblique
 	
 	&__menu	
 		padding-top: 2rem
@@ -47,12 +46,14 @@
 			position: absolute
 			height: 5px
 			width: 10%
-			left: 30px
+			left: 1.5rem
 			bottom: 0.5rem
 			background: $tertiaryColor
 			display: block
 			content: ""
-
+			@include desktop-only 	
+				left: 3rem
+				
 		&__cardwrap
 			display: flex
 			flex-wrap: wrap
